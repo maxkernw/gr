@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Press+Start+2P"
+    />
+    <title>Grattis</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Press Start 2P";
+      }
+      body {
+        height: 100vh;
+        width: 100%;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        background: linear-gradient(
+          -45deg,
+          #6ecf69,
+          #30beb0,
+          #75db31,
+          #b1d523,
+          red,
+          gold
+        );
+        background-size: 400% 400%;
+        animation: gradient 2s ease infinite;
+      }
+
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      h1 {
+        animation-name: spinner, color-change;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-duration: 3s;
+        transform-style: preserve-3d;
+        text-align: center;
+        text-shadow: 0 0 10px rgba(0,0,0, .5)
+      }
+      @keyframes spinner {
+        from {
+          transform: rotateY(0deg) rotateX(0deg);
+        }
+        to {
+          transform: rotateY(-360deg) rotateX(360deg);
+        }
+      }
+      @keyframes color-change {
+        0% {
+          color: red;
+        }
+        50% {
+          color: blue;
+        }
+        100% {
+          color: red;
+        }
+      }
+    </style>
+    <script defer src="main.js"></script>
+  </head>
+  <body>
+    <h1>GRATTIS MIGUEL</h1>
+  </body>
+</html>
